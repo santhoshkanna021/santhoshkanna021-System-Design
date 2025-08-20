@@ -1,7 +1,7 @@
 import React from "react";
 import goldMedal from "../assets/Gold.jpg";     // 1st place
 import silverMedal from "../assets/Silver.jpg"; // 2nd place
-import bronzeMedal from "../assets/Bronze.jpg"; // 3rd place
+import bronzeMedal from "../assets/bronze.jpg"; // 3rd place
 
 const Leaderboard = ({ users }) => {
   const sortedUsers = [...users].sort((a, b) => b.totalPoints - a.totalPoints);
