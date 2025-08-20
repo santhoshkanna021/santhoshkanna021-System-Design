@@ -1,6 +1,6 @@
 import React from "react";
 import goldMedal from "../assets/Gold.jpg";     // 1st place
-import silverMedal from "../assets/Sliver.jpg"; // 2nd place
+import silverMedal from "../assets/Silver.jpg"; // 2nd place
 import bronzeMedal from "../assets/Bronze.jpg"; // 3rd place
 
 const Leaderboard = ({ users }) => {
