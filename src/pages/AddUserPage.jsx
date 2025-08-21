@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { addUser } from "../services/api";
 import { useNavigate } from "react-router-dom";
-import bg from "../assets/bg.jpg";
+import bg from "../assets/confitte.svg";
 
 const AddUserPage = ({ onAdd }) => {
   const [newUser, setNewUser] = useState("");
@@ -17,7 +17,12 @@ const AddUserPage = ({ onAdd }) => {
   return (
     <div
       className="w-full h-screen bg-cover bg-center flex items-center justify-center"
-      style={{ backgroundImage: `url(${bg})` }}
+      style={{
+        backgroundImage: `linear-gradient(to bottom right, rgba(123, 31, 162, 0.7), rgba(255, 64, 129, 0.6)), url(${bg})`,
+        backgroundBlendMode: 'overlay',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
     >
       <div className="p-6 w-full max-w-md border rounded shadow bg-white bg-opacity-90">
         <h2 className="text-xl font-bold mb-4 text-center">Add New User</h2>

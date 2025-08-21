@@ -20,22 +20,22 @@ const Leaderboard = ({ users }) => {
       <h2 className="text-3xl font-bold mb-4 text-center">Leaderboard</h2>
 
       {/* Top 3 Highlighted */}
-      <div className="flex justify-around mb-6 ">
+      <div className="flex justify-around mb-6">
         {top3.map((u, index) => (
           <div
             key={u._id}
             className="p-4 rounded-2xl w-1/4 text-center flex flex-col items-center 
                        transition-all duration-300 hover:bg-blue-500 hover:text-white 
-                       hover:rounded-2xl cursor-pointer bg-white shadow-lg"
+                       hover:rounded-2xl cursor-pointer shadow-lg"
           >
             <img
               src={getMedal(index)}
               alt={`Rank ${index + 1}`}
               className="w-16 h-16 mb-2 rounded-full"
             />
-            <p className="font-bold text-xl">#{u.rank}</p>
-            <p className="font-semibold">{u.name}</p>
-            <p>{u.totalPoints} pts</p>
+            {/* Removed the rank number */}
+            <p className="font-semibold text-xl">{u.name}</p>
+            <p className="text-lg">{u.totalPoints} pts</p>
           </div>
         ))}
       </div>
